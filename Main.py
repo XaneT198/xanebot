@@ -22,6 +22,8 @@ async def load_extensions():
     await bot.load_extension("cogs.bal")  
     await bot.load_extension("cogs.work")
     await bot.load_extension("cogs.leaderboard")
+    await bot.load_extension("cogs.pay")
+    await bot.load_extension("cogs.request")
 
 intents = discord.Intents.all()
 intents.message_content = True
@@ -34,6 +36,7 @@ async def on_ready():
     print(GKEY)
     print(Token)
     await bot.tree.sync()
+
 
 async def main():
     await load_extensions()

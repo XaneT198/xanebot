@@ -29,9 +29,9 @@ CREATE TABLE IF NOT EXISTS user_balances (
         result = self.cursor.fetchone()
 
         if result is None:
-            self.cursor.execute('INSERT INTO user_balances (user_id, balance) VALUES (?, ?)', (id, 5000))
+            self.cursor.execute('INSERT INTO user_balances (user_id, balance) VALUES (?, ?)', (id, 2000))
             self.connect.commit()
-            current_balance = 5000
+            current_balance = 2000
         else:
             current_balance = result[0]
         

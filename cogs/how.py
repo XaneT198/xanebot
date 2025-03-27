@@ -16,13 +16,8 @@ class how(commands.Cog):
     @commands.command()
     async def how (self,ctx):
         await ctx.send("My Current commands are: ")
-        await ctx.send(".hello - Greet me ")
-        await ctx.send(".memcount - See the current member count")
-        await ctx.send(".randGIF - recieve a random gif")
-        await ctx.send(".gamble - gamble to potentially earn bux and move higher on the leaderbord")
-        await ctx.send(".work - work and be given 300 bux")
-        await ctx.send(".bal - view your balance and se ehow many credits you have")
-        await ctx.send(".leaderboard - view the top 3 highest balances")
+        await ctx.send(""".hello - Greet me \n.memcount - See the current member count \n.randgif - recieve a random gif \n.gamble - gamble to potentially earn bux and move higher on the leaderbord \n.work - work and be given 300 bux \n.bal - view your balance and se ehow many credits you have \n.leaderboard - view the top 3 highest balances \n .pay - pay a specified member a certain amount of your choosing if your feeling generous :moneybag: .pay [@user] [Amount] \n .request - request a certain amount of money from a user .request [@user][Amount]""")
+    
 
 async def setup(bot):
     await bot.add_cog(how(bot))

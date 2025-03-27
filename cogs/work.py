@@ -34,19 +34,19 @@ class work(commands.Cog):
       
         if result is None:
             await ctx.send("You don't have a balance record yet! Starting with 5000 coins.")
-            self.cursor.execute('INSERT INTO user_balances (user_id, balance) VALUES (?, ?)', (id, 5000))
+            self.cursor.execute('INSERT INTO user_balances (user_id, balance) VALUES (?, ?)', (id, 2000))
             self.connect.commit()
             return
 
     
         current_balance = result[0]
-        new_balance = current_balance + 300
+        new_balance = current_balance + 50
 
         self.cursor.execute('UPDATE user_balances SET balance = ? WHERE user_id = ?', (new_balance, id))
         self.connect.commit()
         
        
-        await ctx.send(f"Good work! You've earned 300 coins. Your new balance is {new_balance} :moneybag:")
+        await ctx.send(f"Good work! You've earned 50 coins. Your new balance is {new_balance} :moneybag:")
 
     def cog_unload(self):
         self.connect.close()
