@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS user_balances (
         self.connect.commit()
 
     @commands.command()
-    async def gamble(self, ctx, amount: int = 1000):
+    async def gamble(self, ctx, amount: int = 200):
         id = ctx.author.id
         self.cursor.execute('SELECT balance FROM user_balances WHERE user_id = ?', (id,))
         result = self.cursor.fetchone()

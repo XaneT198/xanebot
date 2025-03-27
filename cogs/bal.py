@@ -18,7 +18,6 @@ class bal(commands.Cog):
         print("Database connected successfully.")
         self.connect.commit()
 
-        # Create table if it doesn't exist
         self.cursor.execute('''
         CREATE TABLE IF NOT EXISTS user_balances (
             user_id INTEGER PRIMARY KEY,

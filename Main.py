@@ -20,6 +20,8 @@ async def load_extensions():
     await bot.load_extension("cogs.gamble")
     await bot.load_extension("cogs.randgif")
     await bot.load_extension("cogs.bal")  
+    await bot.load_extension("cogs.work")
+    await bot.load_extension("cogs.leaderboard")
 
 intents = discord.Intents.all()
 intents.message_content = True
